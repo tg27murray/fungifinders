@@ -1,1 +1,12 @@
-document.querySelector(".text-main").style.backgroundColor = "blue";
+const navToggle = document.querySelector('[aria-controls="primary-nav"]');
+const primaryNav = document.querySelector(".primaryNavigation");
+
+navToggle.addEventListener("click", () => {
+  const navOpened = navToggle.getAttribute("aria-expanded");
+  if (navOpened === "false") {
+    navToggle.setAttribute("aria-expanded", "true");
+  } else {
+    navToggle.setAttribute("aria-expanded", "false");
+  }
+  console.log(navOpened);
+});
